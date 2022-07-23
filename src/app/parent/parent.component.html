@@ -1,0 +1,16 @@
+
+  <div style="padding:20px; ">
+
+    <div class="fill">
+      <h1 class="text-center m-3">Child Component</h1>
+      <br>
+      <div style="padding:50px">
+  <p>Todays Beverage : <strong>{{beverage}}</strong></p>
+  <label for="beverage-input">Add a beverage :</label>
+  <input type="text" name="" id="beverage-input" #newBeverage>
+  <button (click)="addBeverageEvent(newBeverage.value)">ADD</button>
+     <span></span>
+    </div>
+  </div>
+</div>
+<br>
