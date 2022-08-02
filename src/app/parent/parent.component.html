@@ -1,16 +1,14 @@
-
-  <div style="padding:20px; ">
-
-    <div class="fill">
-      <h1 class="text-center m-3">Child Component</h1>
-      <br>
-      <div style="padding:50px">
-  <p>Todays Beverage : <strong>{{beverage}}</strong></p>
-  <label for="beverage-input">Add a beverage :</label>
-  <input type="text" name="" id="beverage-input" #newBeverage>
-  <button (click)="addBeverageEvent(newBeverage.value)">ADD</button>
-     <span></span>
+<div style="padding:20px; ">
+  <div class="fill ">
+    <h1 class="text-center m-3">Child Component</h1>
+    <br>
+    <div *ngFor="let b of parentdata">
+      <label for="beverage-input">Send Parent:</label>
+      <input type="text" value="{{b}}" name="name" #newdatasendEvent>
+      <button class="btn btn-dark mt-2 ms-3" (click)="sendparent(newdatasendEvent.value)">SendParent</button>
     </div>
   </div>
+  <button class="btn btn-dark mt-2 ms-3" (click)="sendparent(newdatasendEvent.value)">SendParent</button>
+
 </div>
 <br>
